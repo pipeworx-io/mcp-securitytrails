@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/securitytrails",
   "title": "Securitytrails",
   "description": "SecurityTrails MCP — wraps SecurityTrails API (securitytrails.com)",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/securitytrails",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-securitytrails",
