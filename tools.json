@@ -1,0 +1,98 @@
+[
+  {
+    "name": "securitytrails_domain",
+    "description": "Domain intel (DNS, subdomain count) for <hostname>. Returns current A/MX/NS records, subdomain count, and Alexa rank. Example: securitytrails_domain({ hostname: \"github.com\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "hostname": {
+          "type": "string",
+          "description": "Apex domain / hostname, e.g. \"github.com\""
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "SecurityTrails API key (get one free at securitytrails.com — 50 lookups/mo)"
+        }
+      },
+      "required": [
+        "hostname",
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "securitytrails_subdomains",
+    "description": "Enumerate subdomains of <hostname>. Returns the subdomain labels plus fully-qualified domains. Example: securitytrails_subdomains({ hostname: \"github.com\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "hostname": {
+          "type": "string",
+          "description": "Apex domain / hostname to enumerate, e.g. \"github.com\""
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "SecurityTrails API key"
+        }
+      },
+      "required": [
+        "hostname",
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "securitytrails_dns_history",
+    "description": "Historical DNS records for <hostname>. Returns past record values with first/last-seen dates for a given record type (a, aaaa, mx, ns, soa, txt). Example: securitytrails_dns_history({ hostname: \"github.com\", type: \"a\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "hostname": {
+          "type": "string",
+          "description": "Apex domain / hostname, e.g. \"github.com\""
+        },
+        "type": {
+          "type": "string",
+          "description": "DNS record type: a, aaaa, mx, ns, soa, or txt (default \"a\")",
+          "enum": [
+            "a",
+            "aaaa",
+            "mx",
+            "ns",
+            "soa",
+            "txt"
+          ]
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "SecurityTrails API key"
+        }
+      },
+      "required": [
+        "hostname",
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "securitytrails_whois",
+    "description": "WHOIS for <hostname>. Returns registrar, creation/expiration dates, and registration contacts. Example: securitytrails_whois({ hostname: \"github.com\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "hostname": {
+          "type": "string",
+          "description": "Apex domain / hostname, e.g. \"github.com\""
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "SecurityTrails API key"
+        }
+      },
+      "required": [
+        "hostname",
+        "_apiKey"
+      ]
+    }
+  }
+]
