@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-securitytrails",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "SecurityTrails MCP — wraps SecurityTrails API (securitytrails.com)",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "securitytrails",
     "gatewaySlug": "securitytrails",
-    "sourceHash": "v1-cd8a345c0b77b649837b8bd48f2539730d306edf264c7364b9af6adeb7f00394",
-    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
+    "sourceHash": "v1-bf9792789034326d799052b124f8760bff3d892052d422898fa0b2ad32dfc747",
+    "sourceCommit": "8fc802aa5e23be625ce08d97178f5676c7bc93f3"
   }
 }
